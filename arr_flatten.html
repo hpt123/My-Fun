@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [1, 2, [3, 4, [5, 9]], [6, 4, 2], [[[7, 8, [1]]]]];
+      //  方法一
+      console.log(
+        Array.from(new Set(arr.flat(Infinity))).sort((a, b) => a - b)
+      );
+
+      // 方法二
+      var temp = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (isArray(arr[i])) {
+          temp = temp.concat(flatten(arr[i]));
+        } else {
+          temp.push(arr[i]);
+        }
+      }
+
+      function isArray(a) {
+        return {}.toString.call(a) === "[object Array]" ? true : false;
+      }
+      function flatten(a) {
+        return a.reduce(function (prev, item) {
+          return prev.concat(
+            {}.toString.call(item) === "[object Array]" ? flatten(item) : item
+          );
+        }, []);
+      }
+      function quchong(temp) {
+        let arr = [];
+        for (let i = 0; i < temp.length; i++) {
+          if (arr.indexOf(temp[i]) == -1) {
+            arr.push(temp[i]);
+          }
+        }
+        return arr.sort((a, b) => a - b);
+        return temp.filter((item, index) => {
+          return temp.indexOf(item) == index;
+        });
+      }
+      console.log(quchong(temp).sort((a, b) => a - b));
+      arr = [1, 1, 2, 3, 5, 5, 6];
+      console.log([...new Set(arr)].sort());
+    </script>
+  </body>
+</html>
