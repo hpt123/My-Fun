@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="clone.js"></script>
+    <script>
+      var a = {
+        name: "zhangsan",
+        age: 35,
+        child: [
+          {
+            name1: "lisi",
+            age: 3
+          },
+          {
+            name2: "wangwu",
+            age: 1
+          }
+        ],
+        eat: {
+          food: "fish",
+          drink: "water"
+        },
+        car: ["car1", "car2", "car3"],
+        house: null
+      };
+
+      // var b = Clone.prototype.deepClone(a, {});
+      // console.log(b);
+      // b.age = 40;
+      // console.log(a);
+      // var c = Clone.prototype.lightClone(a, {});
+      // console.log(c);
+      // c.age = 60;
+      // console.log(a);
+    </script>
+  </body>
+</html>
