@@ -22,6 +22,7 @@
     }
     return now;
   };
+
   // 浅拷贝
   Clone.prototype.lightClone = function (origin, now) {
     for (let key in origin) {
