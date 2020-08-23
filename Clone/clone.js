@@ -24,7 +24,9 @@
   };
   // 浅拷贝
   Clone.prototype.lightClone = function (origin, now) {
-    now = origin;
+    for (let key in origin) {
+      now[key] = origin[key];
+    }
     return now;
   };
   window.Clone = Clone;
