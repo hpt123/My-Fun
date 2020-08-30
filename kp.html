@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function kp(arr) {
+        if (arr.length <= 1) {
+          return arr;
+        }
+        var left = [],
+          right = [],
+          mid = Math.floor(arr.length / 2),
+          mid_value = arr.splice(mid, 1)[0];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < mid_value) {
+            left.push(arr[i]);
+          } else {
+            right.push(arr[i]);
+          }
+        }
+        return kp(left).concat(mid_value, kp(right));
+      }
+      console.log(kp([6, 8, 3, 1, 9, 7, 2, 4, 0, 1, 5, 6, 8]));
+    </script>
+  </body>
+</html>
