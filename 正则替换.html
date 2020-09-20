@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box"></div>
+    <script type="text/html" id="tpl">
+        <h1>{{title}}</h1>
+      <h3>{{content}}</h3>
+    </script>
+    <script>
+      var box = document.getElementsByClassName("box")[0];
+      var tpl = document
+        .getElementById("tpl")
+        .innerHTML.replace(/{{(.*?)}}/g, function (node, key) {
+          return {
+            title: "标题",
+            content: "内容"
+          }[key];
+        });
+      box.innerHTML = tpl;
+    </script>
+  </body>
+</html>
