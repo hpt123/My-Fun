@@ -9,8 +9,8 @@
   Caculator.prototype.init = function () {
     doc.addEventListener("click", this.calClick.bind(this), false);
   };
-  Caculator.prototype.calClick = function (ev) {
-    e = ev || window.event;
+  Caculator.prototype.calClick = function (e) {
+    e = e || window.event;
     tar = e.target || e.srcElement;
     var tagName = tar.tagName.toLowerCase();
     if (tagName == "button") {
