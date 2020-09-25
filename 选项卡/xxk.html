@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 500px;
+        height: 500px;
+        margin: 50px auto;
+      }
+      .tab {
+        height: 50px;
+        width: 100%;
+      }
+      .tab .item {
+        float: left;
+        width: 100px;
+        height: 100%;
+        text-align: center;
+        line-height: 50px;
+      }
+      .tab .item.current {
+        background-color: #000;
+        color: #fff;
+      }
+      .page {
+        height: 450px;
+        border: 1px solid gray;
+        position: relative;
+      }
+      .page .item {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        line-height: 450px;
+        font-size: 40px;
+        display: none;
+      }
+      .page .item.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="tab">
+        <div class="item current">选项卡1</div>
+        <div class="item">选项卡2</div>
+        <div class="item">选项卡3</div>
+      </div>
+      <div class="page">
+        <div class="item active">页面一</div>
+        <div class="item">页面二</div>
+        <div class="item">页面三</div>
+      </div>
+    </div>
+    <script>
+      (function (doc) {
+        var oTab = doc.getElementsByClassName("tab")[0],
+          oPage = doc.getElementsByClassName("page")[0],
+          tabItems = oTab.getElementsByClassName("item"),
+          pageItems = oPage.getElementsByClassName("item");
+        var init = function () {
+          bindEvent();
+        };
+        function bindEvent() {
+          oTab.addEventListener("mouseover", tabClick, false);
+        }
+        function tabClick(ev) {
+          var e = ev || window.event,
+            tar = e.target || e.srcElement,
+            className = tar.className;
+          if (className == "item") {
+            var curIdx = Array.prototype.indexOf.call(tabItems, tar);
+            for (let i = 0; i < tabItems.length; i++) {
+              tabItems[i].className = "item";
+              pageItems[i].className = "item";
+            }
+            tar.className += " current";
+            pageItems[curIdx].className += " active";
+          }
+        }
+        init();
+      })(document);
+    </script>
+  </body>
+</html>
