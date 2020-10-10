@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.qipang {
+  width: 700px;
+  height: 500px;
+  margin: 100px auto;
+  background-color: #888;
+}
+.qipang:hover {
+  cursor: pointer;
+}
+.qipang > ul {
+  width: 100%;
+  height: 50px;
+  border: none;
+}
+.qipang > ul > li {
+  float: left;
+  width: 70px;
+  height: 50px;
+  border: 1px solid;
+  box-sizing: border-box;
+  list-style: none;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+}
+
+.color {
+  background-color: brown;
+}
+p {
+  text-align: center;
+  visibility: hidden;
+}
+[field="pl"] {
+  background-color: chartreuse;
+}
+
+.color[field="k"] {
+  background-color: aquamarine !important;
+}
