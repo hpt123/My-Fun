@@ -57,13 +57,13 @@
         var temp = parseInt(tar.id),
           count = 0;
         if (
-          temp > 1 &&
+          temp%10!==1&&
           document.getElementById(temp - 1).className === "active"
         ) {
           count++;
         }
         if (
-          temp < 100 &&
+          temp%10!==0&&
           document.getElementById(temp + 1).className === "active"
         ) {
           count++;
