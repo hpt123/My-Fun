@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度联想词</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+	<div class="search-wrap">
+    <div class="input-wrap">
+      <input type="text" class="search-input J_searchInput" />
+    </div>
+    <div class="list-wrap">
+      <ul class="wd-list J_wdList"></ul>
+    </div>
+  </div>
+  <script type="text/html" id="J_listTpl">
+    <li class="wd-item">
+      <a href="https://www.baidu.com/s?wd={{wdLink}}" target="_blank" class="wd-lk">{{wd}}</a>
+    </li> 
+  </script>
+  <script src="js/index.js"></script>
+</body>
+</html>

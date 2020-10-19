@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="referrer" content="no-referrer" />
+	<title>豆瓣音乐搜索</title>
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+	<div class="search-wrap">
+		<input type="text" id="J_searchInput" class="search-input" placeholder="唱片名、表演者、条码、ISRC" />
+		<ul class="search-list J_list"></ul>
+	</div>
+  
+  <script type="text/html" id="J_searchItemTpl">
+  	<li class="list-item">
+			<a href="{{url}}" target="_blank" class="item-lk">
+				<div class="item-img">
+					<img src="{{image}}" alt="{{title}}" />
+				</div>
+				<div class="intro">
+					<h1 class="title">{{title}}</h1>
+					<p class="author">表演者：<span>{{singer}}</span></p>
+				</div>
+			</a>
+		</li>
+  </script>
+	<script src="js/utils.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

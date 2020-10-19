@@ -1,0 +1,117 @@
+html{
+	background-color: #f0f3ef;
+}
+
+body{
+	margin: 0;
+}
+
+input{
+	outline: none;
+	border: none;
+
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+li,div{
+	box-sizing: border-box;
+}
+
+img{
+	width: 100%;
+}
+
+h1,p{
+	margin: 0;
+	font-weight: normal;
+}
+
+.search-wrap{
+	position: relative;
+	width: 470px;
+	height: 34px;
+	margin: 50px auto;
+}
+
+.search-wrap .search-input{
+	width: 470px;
+	height: 34px;
+	background-color: #fff;
+	text-indent: 10px;
+	font-size: 13px;
+	border-radius: 3px;
+	box-shadow: 0px 2px 1px #ccc;
+}
+
+.search-wrap .search-list{
+	display: none;
+	position: absolute;
+	top: 37px;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.search-wrap .list-item{
+	height: 55px;
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+}
+
+.search-wrap .list-item .item-lk{
+	display: block;
+	position: relative;
+	height: 100%;
+}
+
+.search-wrap .list-item .item-img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+}
+
+.search-wrap .list-item .intro{
+	margin-left: 48px;
+}
+
+.search-wrap .list-item .intro .title{
+	color: #416691;
+	font-size: 14px;
+}
+
+.search-wrap .list-item .intro .author{
+    color: #999;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
